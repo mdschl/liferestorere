@@ -37,7 +37,8 @@ body {
 
 .box-holder .text {
     position: absolute;
-    top: 65%;
+    top: 64%;
+    font-size: 2vh;
     margin-top: 20vh;
     font-family: 'filler';
     color: #B7D5D4;
@@ -45,7 +46,8 @@ body {
 
 .box-holder .link {
     position: absolute;
-    top: 69%;
+    top: 67%;
+    font-size: 2vh;
     margin-top: 20vh;
     font-family: 'filler';
     color: #B7D5D4;
