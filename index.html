@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oguri Feeder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box-holder">
+      <h1>Oguri Feeder</h1>
+        <img src="1.png" id="feed-img" alt="Oguri Feeder">
+        <p id="counter">Feeds: ...</p>
+        <p class="text">This is a work in progress project made by</p>
+        <p class="link">MDTOWERZ/The Climber</p>
+    </div>
+
+
+    <script>
+// actual torture getting ts but it makes the clicks counter work, happy oguri?
+        const KEY = "mdtowerz_oguri_feeder";
+        const BASE = "https://countapi.mileshilliard.com/api/v1";
+        const counterEl = document.getElementById("counter");
+        const img = document.getElementById("feed-img");
+
+
+        fetch(`${BASE}/get/${KEY}`)
+            .then(res => res.json())
+            .then(data => {
+                counterEl.textContent = `Feeds: ${data.value ?? 0}`;
+            })
+            .catch(() => {
+                counterEl.textContent = "Feeds: --";
+            });
+
+
+        img.addEventListener("click", () => {
+            fetch(`${BASE}/hit/${KEY}`)
+                .then(res => res.json())
+                .then(data => {
+                    counterEl.textContent = `Feeds: ${data.value}`;
+                })
+                .catch(() => {});
+        });
+    </script>
+</body>
+</html>

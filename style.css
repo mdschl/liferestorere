@@ -1,0 +1,78 @@
+body {
+    background-color: #305252;
+}
+
+.box-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+    background-color: #488286;
+    border-radius: 6px;
+}
+
+.box-holder p#counter {
+    position: absolute;
+    top: 50%;
+    margin-top: 20vh;
+    font-family: 'Talina';
+    color: white;
+    font-size: 1.4rem;
+    cursor: default;
+}
+
+.box-holder h1 {
+    position: absolute;
+    top: 15%;
+    font-family: 'Talina';
+    color: white;
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+
+.box-holder h1:hover {
+    transform: scale(1.08);
+}
+
+.box-holder .text {
+    position: absolute;
+    top: 65%;
+    margin-top: 20vh;
+    font-family: 'filler';
+    color: #B7D5D4;
+}
+
+.box-holder .link {
+    position: absolute;
+    top: 69%;
+    margin-top: 20vh;
+    font-family: 'filler';
+    color: #B7D5D4;
+}
+
+.box-holder img {
+    height: 30vh;
+    width: 30vh;
+    position: absolute;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.box-holder img:hover {
+    transform: scale(1.08);
+}
+
+.box-holder img:active {
+    transform: scale(0.95);
+}
+
+@font-face {
+  font-family: 'Talina'; 
+  src: url(OutlineBubble-Regular.otf); /* url of the font */
+
+}
+@font-face {
+  font-family: 'filler';
+  src: url(Talina\ DEMO.otf);
+}
