@@ -62,12 +62,14 @@ body {
     touch-action: manipulation;
 }
 
-.box-holder img:hover {
-    transform: scale(1.08);
+@media (hover: hover) {
+    .box-holder img:hover {
+        transform: scale(1.08);
+    }
 }
 
 .box-holder img:active {
-    transform: scale(0.95);
+    transform: scale(0.92);
 }
 
 @font-face {
