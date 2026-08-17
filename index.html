@@ -8,7 +8,8 @@
 </head>
 <body>
     <div class="box-holder">
-      <h1>Oguri Feeder</h1>
+        <div id="carrots"></div>
+        <h1>Oguri Feeder</h1>
         <img src="3.png" id="feed-img" alt="Oguri Feeder">
         <p id="counter">Feeds: ...</p>
         <p class="text">This is a work in progress project made by</p>
@@ -16,9 +17,26 @@
             <a href="https://www.instagram.com/mdtowerz/" target="_blank">MDTOWERZ/The Climber</a>
         </p>    
     </div>
+<script>
+// dumbahh code for the carrots that fat oguri gon eat
+    const carrotContainer = document.getElementById("carrots");
+    const carrotCount = 15; 
 
+    for (let i = 0; i < carrotCount; i++) {
+        const carrot = document.createElement("div");
+        carrot.className = "carrot";
 
-    <script>
+        const size = Math.random() * 20 + 20; 
+        carrot.style.width = `${size}px`;
+        carrot.style.height = `${size}px`;
+        carrot.style.left = `${Math.random() * 100}%`;
+
+        const duration = Math.random() * 6 + 6; 
+        carrot.style.animationDuration = `${duration}s`;
+        carrot.style.animationDelay = `${Math.random() * 10}s`; 
+
+        carrotContainer.appendChild(carrot);
+    }
 // actual torture getting ts but it makes the clicks counter work, happy oguri?
         const KEY = "mdtowerz_oguri_feeder";
         const BASE = "https://countapi.mileshilliard.com/api/v1";
@@ -44,7 +62,7 @@
                 })
                 .catch(() => {});
 
-            // floating +1 effect
+
             const rect = img.parentElement.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
