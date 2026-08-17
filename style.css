@@ -10,6 +10,8 @@ body {
     height: 97vh;
     background-color: #488286;
     border-radius: 6px;
+    position: relative;
+    overflow: hidden;
 }
 
 .box-holder p#counter {
@@ -53,6 +55,17 @@ body {
     color: #B7D5D4;
 }
 
+.box-holder .link a {
+    color: #9ddbd7;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.box-holder .link a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
 .box-holder img {
     height: 30vh;
     width: 30vh;
@@ -70,6 +83,27 @@ body {
 
 .box-holder img:active {
     transform: scale(0.92);
+}
+
+.float-number {
+    position: absolute;
+    font-family: 'Talina';
+    color: white;
+    font-size: 1.5rem;
+    pointer-events: none;
+    user-select: none;
+    animation: floatUp 1.3s ease-out forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
 }
 
 @font-face {

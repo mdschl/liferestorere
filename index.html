@@ -9,10 +9,12 @@
 <body>
     <div class="box-holder">
       <h1>Oguri Feeder</h1>
-        <img src="1.png" id="feed-img" alt="Oguri Feeder">
+        <img src="3.png" id="feed-img" alt="Oguri Feeder">
         <p id="counter">Feeds: ...</p>
         <p class="text">This is a work in progress project made by</p>
-        <p class="link">MDTOWERZ/The Climber</p>
+        <p class="link">
+            <a href="https://www.instagram.com/mdtowerz/" target="_blank">MDTOWERZ/The Climber</a>
+        </p>    
     </div>
 
 
@@ -34,13 +36,27 @@
             });
 
 
-        img.addEventListener("click", () => {
+        img.addEventListener("click", (e) => {
             fetch(`${BASE}/hit/${KEY}`)
                 .then(res => res.json())
                 .then(data => {
                     counterEl.textContent = `Feeds: ${data.value}`;
                 })
                 .catch(() => {});
+
+            // floating +1 effect
+            const rect = img.parentElement.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const num = document.createElement("div");
+            num.className = "float-number";
+            num.textContent = "+1";
+            num.style.left = `${x}px`;
+            num.style.top = `${y}px`;
+
+            img.parentElement.appendChild(num);
+            num.addEventListener("animationend", () => num.remove());
         });
         document.addEventListener('touchstart', function(){}, false);
     </script>
