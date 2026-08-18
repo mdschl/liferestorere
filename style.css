@@ -109,7 +109,7 @@ body {
 }
 
 .box-holder img:active {
-    transform: scale(0.92);
+    transform: scale(0.91);
 }
 
 .float-number {
