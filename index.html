@@ -10,8 +10,8 @@
     <div class="box-holder">
         <div id="carrots"></div>
         <h1>Oguri Feeder</h1>
-        <img src="3.png" id="feed-img" alt="Oguri Feeder">
-        <p id="counter">Feeds: ...</p>
+        <img src="Images/3.png" id="feed-img" alt="Oguri Feeder">
+        <p id="counter">Total Feeds: ...</p>
         <p class="text">This is a work in progress project made by</p>
         <p class="link">
             <a href="https://www.instagram.com/mdtowerz/" target="_blank">MDTOWERZ</a>
@@ -47,10 +47,10 @@
         fetch(`${BASE}/get/${KEY}`)
             .then(res => res.json())
             .then(data => {
-                counterEl.textContent = `Feeds: ${data.value ?? 0}`;
+                counterEl.textContent = `Total Feeds: ${data.value ?? 0}`;
             })
             .catch(() => {
-                counterEl.textContent = "Feeds: --";
+                counterEl.textContent = "Total Feeds: --";
             });
 
 
@@ -58,7 +58,7 @@
             fetch(`${BASE}/hit/${KEY}`)
                 .then(res => res.json())
                 .then(data => {
-                    counterEl.textContent = `Feeds: ${data.value}`;
+                    counterEl.textContent = `Total Feeds: ${data.value}`;
                 })
                 .catch(() => {});
 

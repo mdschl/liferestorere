@@ -14,7 +14,7 @@ body {
 .carrot {
     position: absolute;
     top: -10%;
-    background-image: url('carrot.png');
+    background-image: url('Images/carrot.png');
     background-size: contain;
     background-repeat: no-repeat;
     animation: fall linear infinite;
@@ -135,10 +135,10 @@ body {
 
 @font-face {
   font-family: 'Talina'; 
-  src: url(OutlineBubble-Regular.otf); /* url of the font */
+  src: url(Fonts/OutlineBubble-Regular.otf); /* url of the font */
 
 }
 @font-face {
   font-family: 'filler';
-  src: url(Talina\ DEMO.otf);
+  src: url(Fonts/Talina\ DEMO.otf);
 }
